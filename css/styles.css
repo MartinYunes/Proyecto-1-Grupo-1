@@ -70,3 +70,12 @@ header{
     width: 200px;
     height: 200px;
 }
+
+h2{
+    color: black;
+    font-family: 'Inter', sans-serif;
+    margin: 0px;
+    text-decoration: none;
+    
+}
+
