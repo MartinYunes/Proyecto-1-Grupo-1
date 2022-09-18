@@ -9,14 +9,23 @@
 </head>
 <body>
     <header>
-        <div class="buscador">
-            <h1>Netflixiano popeano</h1>
-            
-
-        </div>
-
-
+        <section class = "headerIzquierda">
+            <img class="logoheader" src="./Netflixeano-logos/Netflixeano-logos_transparent.png" alt="Logo Empresa">
+            <a href="./index.html" class="nombrepagina"><h2 class="nombrepagina">Home</h2></a>
+        </section>
+    
+        <nav class="headerDerecha">
+            <article class="linksHeader">
+                <a class="linkfavoritos" href="./favorite.html">Favoritos</a>
+                <a class="linkgeneros" href="./genres.html">Géneros</a>
+            </article>
+            <form class="formbusqueda" action="./search-results.html" method="get">
+                <input class="inputbusqueda" type="text" name="buscar" id="" placeholder="Peliculas o Series">
+                <button class="submitbtn" type="submit">Buscar</button>
+            </form>
+        </nav>
     </header>
+
     <section class="recomendaciones">
         <h1> Peliculas recomendadas </h1>
         
@@ -31,7 +40,7 @@
         <article class="nombres">
             <h2>Atrapame si puedes</h2>
             <h2>Django</h2>
-            <h2>Focuss </h2>
+            <h2>Focus</h2>
             <h2>Kill Bill</h2>
             <h2>Wolf of Wall Street</h2>
         </article>
