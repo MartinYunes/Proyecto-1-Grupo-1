@@ -12,10 +12,16 @@ body{
 }
 
 .nombres{
-    display: flex; justify-content: space-between; margin-left: 20px; margin-right: 65px; color: black; font-size: 15px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    display: flex; justify-content: space-between; margin-left: 20px; margin-right: 20px; color: black; font-size: 15px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 
 }
 
+h1{
+    font-size: 50px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
 
 .item-1{
     display: flex; justify-content: space-between; 
@@ -77,5 +83,46 @@ h2{
     margin: 0px;
     text-decoration: none;
     
+}
+
+.seccionpeliseriefavorita{
+    width: 100%;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+    background-color: #1c1c1c88;
+    padding: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: transparent;
+}
+
+.linkadetalle{
+	display: block;
+	margin: auto;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	transition: 0.5s max-width ease;
+	max-width: 14%;
+	border-radius: 0px 0px 0px 0px ;
+    font-family: 'Work Sans', sans-serif;
+}
+.linkadetalle{
+	color: #fff;
+	max-width: 24%;
+}
+
+h3{
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    margin-left: 10px;
+
 }
 
