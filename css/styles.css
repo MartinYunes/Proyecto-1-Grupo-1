@@ -130,6 +130,16 @@ h2{
     margin-left: 150px;
 }
 
+.peliOSerie{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 250px;
+    align-items: center;
+    margin-top: 5px;
+}
+
 .linkadetalle{
 	display: block;
 	margin: auto;
@@ -262,5 +272,10 @@ h3{
     padding-inline-start: 0%;
     text-align: center;
 
+}
+
+.results-img{
+    width: 250px;
+    height: 300px;
 }
 
