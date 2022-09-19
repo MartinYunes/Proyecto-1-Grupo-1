@@ -57,6 +57,21 @@ header{
     margin-right: 1%;
 }
 
+.logo-footer{
+    align-self: flex-end;
+    height: 300px;
+    margin-bottom: 0px;
+    margin-right: 1%;
+}
+
+.integrantes{
+    font-family: 'Work Sans', sans-serif;
+    align-self: flex-end;
+    color: white;
+    margin: 0px;
+    margin-right: 1%;
+}
+
 .nombrepagina{
     text-decoration: none;
 }
@@ -125,4 +140,53 @@ h3{
     margin-left: 10px;
 
 }
+
+.title{
+    margin: 0px;
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    font-size: 50px;
+    padding-top: 10px;
+}
+
+
+.descripcion_abajo{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-start;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0px;
+    padding-bottom: 7px;
+    padding-left: 0px;
+
+}
+
+.trailerdetalle{
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+    height: 390px;
+    width: 673px;
+}
+
+.lista_abajo{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.descripcion_abajo{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    padding-left: 5px;
+    width: 100%;
+    justify-content: flex-start;
+    font-family: 'Work Sans', sans-serif;
+    margin-top: 3px;
+    margin-bottom: 8px;
+}
+
 
