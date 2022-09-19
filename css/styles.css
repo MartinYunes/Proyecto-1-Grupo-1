@@ -118,6 +118,17 @@ h2{
     background-color: transparent;
 }
 
+.peliculaoserieinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 250px;
+    margin-right: 150px;
+    margin-top: 5px;
+    margin-left: 150px;
+}
+
 .linkadetalle{
 	display: block;
 	margin: auto;
