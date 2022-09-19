@@ -130,7 +130,7 @@ h2{
     margin-left: 150px;
 }
 
-.peliOSerie{
+.nombrepeli-serie{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -277,5 +277,12 @@ h3{
 .results-img{
     width: 250px;
     height: 300px;
+}
+
+.fantasia{
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
 }
 
