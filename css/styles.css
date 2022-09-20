@@ -365,12 +365,11 @@ h3{
     .listaestructural{
         padding-inline-start: 0px;
     }
-    .otraestructura{
-        width: 40px;
-    }
+    
     .fotos{
         display: block;
         justify-content: space-between;
+    
     }
     .item-1{
         display: block;
@@ -500,9 +499,10 @@ h3{
         padding: 2px;
     }
     .tituloGenero{
-        font-size: 60px;
+        font-size: 40px;
     }
 
+    
 
 }
 
