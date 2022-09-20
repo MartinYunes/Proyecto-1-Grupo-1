@@ -12,8 +12,7 @@ body{
 }
 
 .nombres{
-    display: flex; justify-content: space-between; margin-left: 20px; margin-right: 20px; color: black; font-size: 15px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
-
+    display: flex; justify-content: space-between; margin-left: 10px; margin-right: 10px; color: black; font-size: 10px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 }
 
 h1{
