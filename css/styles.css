@@ -12,7 +12,8 @@ body{
 }
 
 .nombres{
-    display: flex; justify-content: space-between; margin-left: 10px; margin-right: 10px; color: black; font-size: 10px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    display: block; justify-content: space-between; margin-left: 10px; margin-right: 10px; color: black; font-size: 10px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+
 }
 
 h1{
@@ -285,3 +286,210 @@ h3{
     font-weight: lighter;
 }
 
+/* REGLAS DE RESPONSIVE */
+@media (max-width: 420px) {
+
+    .peli-recom{
+        text-align: center;
+        margin: 0px;
+        font-size: 50px;
+    }
+    .header{
+        height: 225px;
+    }
+    .Series-recom{
+        text-align: center;
+        margin: 0px;
+        font-size: 50px;
+    }
+    
+    .nombrepagina{
+        font-size: 18px;
+    }
+    .logoheader{
+        height: 70%;
+        margin: 0px;
+    }
+    .headerIzquierda{
+        width: 45%;
+    }
+    .headerDerecha{
+        width: 55%;
+    }
+    .linksHeader{
+        flex-direction: column;
+    }
+    .formbusqueda{
+        width: 100px;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+    }
+    .inputbusqueda{
+        width: 100px;
+        margin-bottom: 3px;
+        padding: 0px;
+    }
+    .submitbtn{
+        padding: 0px;
+        width: 80px;
+        align-self: center;
+    }
+    .linksHeader{
+        width: 37%;
+    }
+    .nav{
+        justify-content: space-around;
+    }
+    .linkfavoritos{
+        margin-bottom: 3px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .linkgeneros{
+        font-size: 14px;
+        text-align: center;
+    }
+    .listaestructural{
+        padding-inline-start: 0px;
+    }
+    .otraestructura{
+        width: 40px;
+    }
+    .fotos{
+        display: block;
+        justify-content: space-between;
+    }
+    .item-1{
+        display: block;
+        justify-content: space-between;
+    }
+
+    .formato {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hijoFormato {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .liDeLista {
+        /* padding-bottom: 25px; */
+        background-color: #2C5364;
+        border-radius: 10px;
+        padding: 0px 10px;
+        display: flex;
+        justify-content: center;
+        margin: 5px 0px;
+    }
+
+    .linkadetalleGenero {
+        color: white;
+        font-family: 'Work Sans', sans-serif;
+        font-size: 25px;
+        text-decoration: none;
+         background-color: transparent; 
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    footer{
+        margin-bottom: 200px;
+    }
+    .seccionpeliseriefavorita{
+    width: 95%;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: #1c1c1c88;
+    padding: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+
+    }
+    .peliculaoserieinfo{
+        margin-bottom: 25px;
+        margin-right: 0px;
+    }
+    .recomendaciones{
+        flex-wrap: wrap;
+        width: 95%;
+        justify-content: space-around;
+    }
+    .nombrepeli-serie{
+        margin-bottom: 25px;
+        margin-right: 0px;
+    }
+    h3{
+        padding: 0px;
+        margin: 10px;
+    }
+    h1{
+        text-align: center;
+        margin: 0px;
+        font-size: 65px;
+    }
+    .textobusqueda{
+        font-size: 0px;
+        text-align: left;
+    }
+    h2{
+        margin-left: 10px;
+        font-size: 40px;
+    }
+    .haBuscado{
+        font-size: 30px;
+        margin-left: 10px;
+    }
+
+    /* reglas detalle responsive */ 
+    .titulo{
+        display: flex; 
+        justify-content: center;
+    } 
+    
+    .contenido_principal {
+        display: flex;
+        justify-content: center;
+    }
+
+    .descripcion_arriba{
+        display: flex; 
+        justify-content: center;
+    } 
+    
+    .imagen_detalle{ 
+        display: flex; 
+        justify-content: center; 
+        width: 325px; 
+    } 
+    
+    .trailer_detalle {
+        height: 183px;
+        width: 325px;
+        margin-top: 8px;
+    }
+
+    .texto_abajo_foto {
+        display: flex;
+        background-color: #1c1c1c88;
+        margin-top: 10px;
+        border-radius: 10px;
+        padding: 2px;
+    }
+    .tituloGenero{
+        font-size: 60px;
+    }
+}
