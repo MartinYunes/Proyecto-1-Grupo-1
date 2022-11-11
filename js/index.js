@@ -8,7 +8,7 @@ fetch(PeliculasPopulares)
     console.log(data);
     let arrayDePersonajes = data.results;
 
-    let seccion = document.querySelector('.container');
+    let seccion = document.querySelector('#pelirecomendadasid');
     let allCharacters = [];
 
     console.log(arrayDePersonajes);
