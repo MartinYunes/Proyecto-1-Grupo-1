@@ -26,40 +26,46 @@
         </nav>
     </header>
 
-    <main class="detail">
-        <section class="title-text">
-            <h1 class="title">Wolf of Wall street</h1>
-            <img src="./img peliculas/Lobodewallstreet.jpg" alt="" height="280px" width="220px">
+    <main class="detalle">
+        <section class="titulo_texto">
+            <h1 class="titulo"></h1>
             
-                <p class="descripcion_abajo">2013 - ⭐ 4,6</p>
-            
-        </section>
-
-        <article>
-            <iframe width="350" height="315" src="https://www.youtube.com/embed/DEMZSa0esCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </article>
-
-        <section class="content-movie">
-            <article>
-                <ul class="lista_abajo">
-                    <li class="descripcion_abajo">3h (180 min)</li>
-                    <li class="descripcion_abajo">Jordan Belfort, corredor de bolsa de Nueva York, quien fundó la compañía Stratton Oakmont cuando aún era un veinteañero, desarrolla hábitos de exceso y corrupción.</li>
-                    <li class="descripcion_abajo">Productores: Leonardo DiCaprio - Martin Scorsese - Riza Aziz - Emma Tillinger Koskoff - Joey McFarland</li>
-                    <li class="descripcion_abajo">
-                        <a href="./detail-genres.html" class="link_botones_generos">Drama</a>
-                    </li>
-                    <li class="descripcion_abajo"> 
-                        <a href="./favorite.html" class="link_favoritos">+ Agregar a favoritos</a>
-                    </li>
-                </ul>
+            <article class="texto_arriba_foto">
+                <p class="descripcion_arriba" id="año.y.rating"></p>
             </article>
         </section>
+
+        <section class="contenido_principal">
+            <article class="imagen_detalle" id="foto.portada">
+            </article>
+            
+            <article class="texto_abajo_foto">
+                
+                    <p class="descripcion_abajo" id="duracion"></p>
+                    <p class="descripcion_abajo" id="sinopsis"></p>
+                    <p class="descripcion_abajo" id="generos.pelicula"></p>
+                    <p class="descripcion_abajo"> 
+                        <a href="./favorite.html" class="linkfavoritos" id="#botonFavoritos">+ Agregar a favoritos</a>
+                    </p>
+                    <p class="descripcion_abajo" id="Providerswatch"></p>
+            </article>
+        </section>
+
+        <p class="linkfavoritos" id="VerRecomendacionesboton"></p>
+
+        <h3>Películas similares</h3>
+        <section class="seccionpeliseriefavorita" id="verRecomendaciones">   
+        </section>
+        
     </main>
 <footer>
     <p class="integrantes">Mateo Silveri, Martin Yunes y Agustin Lovaglio</p>  
 
      <img class="logo-footer" src="./Netflixeano-logos/Netflixeano-logos_transparent.png" alt="Logo Netflixeano">
      <script src="./js/busqueda-resultado.js"></script>
+     <script src="./js/detallePelicula.js" ></script>
+
+     
 
 </footer>
 </body>
