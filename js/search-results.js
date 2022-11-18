@@ -51,7 +51,33 @@ fetch(detailmovie)
     console.log(e)
 })
 
+let detailSerie = `https://api.themoviedb.org/3/search/tv?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1&query=${idUrl}&include_adult=false`;
 
+fetch(detailSerie)
+.then(function (res) {
+    return res.json();
+})
+.then(function (data) {
+    let arrayDeSeries = data.results;
+    console.log(arrayDeSeries);
+
+    
+    let todasSeries = ''
+
+    console.log(arrayDeSeries);
+    
+    for(let i=0; i<4; i++){
+        todasSeries += `<article class="nombrepeli-serie">
+                            <p>${arrayDeSeries[i].name}</p> 
+                            <img class="results-img" src="https://image.tmdb.org/t/p/w500/${arrayDeSeries[i].poster_path}" alt="img">
+                            <a href="./detail-serie.html" class="linkadetalle">Ver más</a>
+                        </article>`
+    }
+    seccionTv.innerHTML = todasSeries;
+})
+.catch( function(e){
+    console.log(e)
+})
 
 
 
