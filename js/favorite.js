@@ -1,0 +1,40 @@
+
+let recupeStorage = localStorage.getItem('favoritos');
+console.log(recupeStorage);
+
+
+let favoritos = JSON.parse(recupeStorage);
+
+let section = document.querySelector("#lista");
+let personajesFavoritos = ''; 
+
+console.log(favoritos);
+if (favoritos == null || favoritos.length == 0) {
+
+    section.innerHTML = '<p>No hay películas en favoritos</p>'
+} else {
+    
+    for (let i = 0; i < favoritos.length; i++) {
+        let url = `https://rickandmortyapi.com/api/character/${favoritos[i]}`
+
+        fetch(url)
+        .then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            console.log(data);
+            personajesFavoritos += `<article>
+                                        <img src=${data.image} alt='${data.name}' />
+                                        <p>Name: <a href="./detallePersonaje.html?idPersonaje=${data.id}"> ${data.name}</a> </p>
+                                        <p>Status: ${data.status} </p>
+                                    </article>`;
+            section.innerHTML = personajesFavoritos;
+
+            return data;
+        }).catch(function (error) {
+            return error;
+        });
+
+        
+        
+    }
+}
