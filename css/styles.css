@@ -19,13 +19,21 @@ body{
     display: flex; justify-content: space-between; 
 }
 
-#lo-mejor{
+#seriesrecomendadasid{
+    display: flex; justify-content: space-between; 
+}
+
+#loMejor{
     display: flex; justify-content: space-between; 
 }
 
 .nombres{
     display: flex; justify-content: space-between; margin-left: 10px; margin-right: 10px; color: black; font-size: 12px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 
+}
+
+.fechas{
+    font-size: 20px;
 }
 
 h1{
