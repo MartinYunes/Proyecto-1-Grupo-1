@@ -1,43 +1,88 @@
-let qs = location.search
-let qsObj = new URLSearchParams(qs)
-let idPelicula = qsObj.get('id')
+let apikey = '81faef6942a31915ed87b416fbba64ba'
+let queryString = location.search
+let qsObj = new URLSearchParams(queryString)
+let detail_id = qsObj.get('id')
 
-let urlDetails = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US`
-let urlWatchProviders = `https://api.themoviedb.org/3/movie/${idPelicula}/watch/providers?api_key=81faef6942a31915ed87b416fbba64ba`
-let urlRecomendations = `https://api.themoviedb.org/3/movie/${idPelicula}/recommendations?api_key=81faef6942a31915ed87b416fbba64ba&language=en-US&page=1`
+let urldetailseries = `https://api.themoviedb.org/3/movie/${detail_id}?api_key=${apikey}&language=en-US`
 
-    let titulo = document.querySelector('.titulo');
-    let anioRating = document.querySelector('#año-rating');
-    let fotoPortada = document.querySelector('#foto-portada');
-    let duracion = document.querySelector('#duracion')
-    let sinopsis = document.querySelector('#sinopsis')
-    let generos = document.querySelector('#generos-pelicula')
-    let botonFavoritos = document.querySelector('#botonFavoritos')
+fetch(urldetailseries)
+    .then(function(response){
+    return response.json();
 
-fetch(urlDetails)
-.then(function (res) {
-    return res.json()
-}).then(function (data) {
+})
+
+    .then(function(data){
+    console.log(data);
+
+
+    let seccion = document.querySelector(".title-text")
+
+
+    seccion.innerHTML+=
+    `<div class="textos">
+        <h1 class="titulo">${data.title}</h1>
+        <div class="desc">
+            <img class="imgdetalleseries" src="https://image.tmdb.org/t/p/w500/${data.poster_path}"/>
+            <p class="sinopsis"> ${data.overview}</p>
+            <ul>
+                <li>Valoracion: ${data.vote_average}</li>
+                <li>Fecha de Estreno: ${data.first_air_date}</li>
+                <li>Temporadas:${data.number_of_seasons}</li>       
+                <li>Genero: 
+                    <ul class=listadetalles></ul>
+                 </li>                
+         
+            </ul>
+        </div>
+    </div>`
+
+
+    let listadetalles = document.querySelector(".listadetalles")
     
-    // Preparo estructura
-    
-    let generosTodos = data.results
-    let todosgeneros = ''
+    let elementosgenerosdetalles=''
 
-    console.log(generosTodos);
-    
-    for (let i = 0; i < 5; i++) {
-       todosgeneros+=`<a href="./detalle_genero.html?id_genero=${generosTodos[i].id}" class="link_botones_generos" id="${generosTodos[i].id}">${generosTodos[i].name}</a> `
+    for (let i=0; i<data.genres.length; i++){
+        elementosgenerosdetalles +=
+
+
+    `<li>${data.genres[i].name}</li>`
     }
 
-    //Con toda la estructura html completa ahora la paso al DOM
-    titulo.innerText = `${data.title}`;
-    anioRating.innerText = `${data.release_date} - ⭐ ${data.vote_average}`
-    fotoPortada.innerHTML = ` <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}'  alt="${data.title}" class="poster">` 
-    duracion.innerText = `${data.runtime} minutos`
-    sinopsis.innerText = `${data.overview}`
-    generos.innerHTML = `${todosgeneros}`
     
-}).catch(function (error) {
-    console.log(error);
+    listadetalles.innerHTML += elementosgenerosdetalles
+
+
+
 })
+    .catch(function(error){
+    console.log('El error es: ' + error);
+})
+
+
+let providers_url = `https://api.themoviedb.org/3/movie/${detail_id}?api_key=${apikey}`
+
+fetch(providers_url)
+    .then(function(response){
+    return response.json();
+})
+    .then(function(data){
+    console.log(data);
+
+    let proveedores = ''
+
+
+//aca arranca lo de los ifs
+// su DetalleSerieContent es proveedores en la nuestra, osea ahi tenes que remplazar eso
+// su DetalleSerieSection es nuestro seccion
+
+
+
+
+
+
+})
+    .catch(function(error){
+    console.log('El error es: ' + error);
+})
+
+
