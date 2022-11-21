@@ -66,4 +66,4 @@ btn.addEventListener("click", function (e){
     }
     letfavToString=JSON.stringify(favoritos);
     localStorage.setItem('favoritos',favToString)
-
+});}}
