@@ -24,11 +24,11 @@ if (favoritos == null || favoritos.length == 0) {
                 return response.json();
             }).then(function (data) {
                 console.log(data);
-                arrayPeliculasFavoritas += `<article class="peliOSerie">
-                                            <p class="nombrePeliOSerie">${data.title}</p>
-                                            <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}' alt="img" class="tapapelicula">
-                                            <a href="./detalle_peliculas.html?id=${data.id}" class="linkadetalle">Ver más</a>
-                                        </article>`
+                arrayPeliculasFavoritas += `<article class="peliculaOSerie">
+                                            <p class="nombrepeliculaOSerie">${data.title}</p>
+                                            <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}' alt="img" class="tapadepelicula">
+                                            <a href="./detail-movie.html?id=${data.id}" class="linkadetalle">Ver más</a>
+                                        </article>`            
 
             pelisFavoritas.innerHTML = arrayPeliculasFavoritas;
 
@@ -53,7 +53,7 @@ btn.addEventListener("click", function (e){
 
 
     }
-    //let fav =document.querySelector('.fav');
+    let fav =document.querySelector('.fav');
 
     if(favoritos.includes(id)){
         let indice= favoritos.indexOF(id);
