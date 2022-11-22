@@ -1,9 +1,9 @@
 let recuperarStorage= localStorage.getItem('favoritos');
-console.log(recuperarStorage);
+
 let favoritos= JSON.parse (recuperarStorage)
 
 
-let seccion= document.querySelector("#lista")
+let section= document.querySelector("#lista")
 
 let peliculasFavoritas = document.querySelector("#peliculasFavoritas");
 
@@ -30,7 +30,7 @@ if (favoritos == null || favoritos.length == 0) {
                                             <a href="./detail-movie.html?id=${data.id}" class="linkadetalle">Ver más</a>
                                         </article>`            
 
-            pelisFavoritas.innerHTML = arrayPeliculasFavoritas;
+            seriesFavoritas.innerHTML = arrayPeliculasFavoritas;
 
             }).catch(function (error) {
                 return error;
@@ -38,32 +38,4 @@ if (favoritos == null || favoritos.length == 0) {
 
 
 
-
-
-let btn= document.querySelector("#botton")
-btn.addEventListener("click", function (e){
-    e.preventDefault()
-    let favoritos = [];
-
-    let recuperarStorage=localStorage.getItem('favoritos');
-
-    if (recuperarStorage !=null){
-        favoritos =JSON.parse(recuperarStorage);
-        console.log(favoritos);
-
-
-    }
-    let fav =document.querySelector('.fav');
-
-    if(favoritos.includes(id)){
-        let indice= favoritos.indexOF(id);
-        favoritos.slice(indice,1);
-        btn.innerText="Agregar favorito"
-
-    }else{
-        favoritos.push(id);
-        btn.innerText="Quitar favorito"
-    }
-    letfavToString=JSON.stringify(favoritos);
-    localStorage.setItem('favoritos',favToString)
-});}}
+};}
