@@ -5,7 +5,7 @@ let favoritos= JSON.parse (recuperarStorage)
 
 let section= document.querySelector("#lista")
 
-let peliculasFavoritas = document.querySelector("#peliculasFavoritas");
+let peliculasFavoritas = document.querySelector("#pelisfavoritas");
 
 let seriesFavoritas = document.querySelector('#seriesFavoritas');
 
@@ -24,9 +24,9 @@ if (favoritos == null || favoritos.length == 0) {
                 return response.json();
             }).then(function (data) {
                 console.log(data);
-                arrayPeliculasFavoritas += `<article class="peliculaOSerie">
-                                            <p class="nombrepeliculaOSerie">${data.title}</p>
-                                            <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}' alt="img" class="tapadepelicula">
+                arrayPeliculasFavoritas += `<article class="seccionpeliseriefavorita">
+                                            <p class="nombrepeli-serieserie">${data.title}</p>
+                                            <img src='https://image.tmdb.org/t/p/w500/${data.poster_path}' alt="img" >
                                             <a href="./detail-movie.html?id=${data.id}" class="linkadetalle">Ver más</a>
                                         </article>`            
 
