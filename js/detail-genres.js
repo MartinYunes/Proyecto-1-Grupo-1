@@ -20,16 +20,16 @@ fetch(urlDetalleGeneroPeliculas).then(function (response) {
     let generosPeliculas = document.querySelector('#genrespeliculas')
 
 
-    //2 Recorro la información de la api y la organizo para mostarla en el html
+    
     for(let i=0; i<5; i++){
-        //Dentro del for voy acumulando en la variable una estructura html por cada personaje del array.
+       
         detalleGenerosPelis += `<article class="peliculaoserieinfo">
                                 <p class="nombrepeli-serie">${arrayDeResultadosPelis[i].title}</p>
                                 <img src='https://image.tmdb.org/t/p/w500/${arrayDeResultadosPelis[i].poster_path}'  alt="" class="tapapelicula">
                                 <a href="./detail-movie.html?id=${arrayDeResultadosPelis[i].id}" class="linkadetalle">Ver más</a>
                             </article>`
     }
-    //Con toda la estructura html completa ahora la paso al DOM
+   
     generosPeliculas.innerHTML = detalleGenerosPelis;
 }).catch(function (error) {
     console.log('el error es' + error);
@@ -45,7 +45,7 @@ fetch(urlDetalleGeneroSeries).then(function (response) {
     let generosSeries = document.querySelector('#genresseries')
 
     for(let i=0; i<5; i++){
-        //Dentro del for voy acumulando en la variable una estructura html por cada personaje del array.
+       
         detalleGenerosSeries += 
         `<div class="peliculaoserieinfo">
             <p class="nombrepeli-serie">${arrayDeResultadosSeries[i].name}</p>
@@ -53,7 +53,7 @@ fetch(urlDetalleGeneroSeries).then(function (response) {
             <a href="./detail-serie.html?id=${arrayDeResultadosSeries[i].id}" class="linkadetalle">Ver más</a>
         </div>`
     }
-    //Con toda la estructura html completa ahora la paso al DOM
+   
     generosSeries.innerHTML = detalleGenerosSeries;
 }).catch(function (error) {
     return error
