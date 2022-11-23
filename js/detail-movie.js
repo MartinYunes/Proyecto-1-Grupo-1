@@ -104,3 +104,72 @@ form.addEventListener('submit', function(e) {
     }
 
 })
+
+let urlWatchProviders = `https://api.themoviedb.org/3/movie/${detail_id}/watch/providers?api_key=81faef6942a31915ed87b416fbba64ba`
+fetch(urlWatchProviders).then(function (res) {
+    return res.json()
+}).then(function (data) {
+    //Acá ya tenemmos los datos finales y es donde debemos escribir nuestro código.
+    let objLitProviders = data.results
+    console.log(objLitProviders);
+
+    //1 Capturo el elemento html en donde quiero hacer una modificación
+    let watchProviders = document.querySelector('#watchProviders')
+
+
+    //Con toda la estructura html completa ahora la paso al DOM
+
+    if (objLitProviders.MX != undefined && objLitProviders.MX.buy != undefined) {
+        let prove = objLitProviders.MX.buy[0];
+        watchProviders.innerHTML = `<p class="prove">${prove.provider_name}</p>
+                                    <img class="imgwatch" src="https://image.tmdb.org/t/p/w500/${prove.logo_path}">`
+    } else {
+        watchProviders.innerText = 'No hay sitios disponibles'
+    }
+
+}).catch(function (error) {
+    console.log(error);
+})
+
+
+
+
+let favoritosPelis = [];
+let botonFavoritosPelis = document.querySelector('#botonFavoritosPelis');
+
+
+/* recuperamos el storage */
+let recuperoStorage = localStorage.getItem('favoritosPelis');
+
+if (recuperoStorage != null) {
+    favoritosPelis = JSON.parse(recuperoStorage);
+};
+
+/* Validar si este id existe en el favoritos (localsStorage) */
+if (favoritosPelis.includes(detail_id)) {
+    botonFavoritosPelis.innerText = "- Quitar de Favoritos";
+}
+
+/* Agregarle un evento al boton de agregar a favorito */
+botonFavoritosPelis.addEventListener("click", function (e) {
+    e.preventDefault()
+
+    /* Si lo incluye, que lo elimine del array y al boton le ponga "Agregar Favorito" */
+    if (favoritosPelis.includes(detail_id)) {
+        let indice = favoritosPelis.indexOf(detail_id);
+        favoritosPelis.splice(indice, 1);
+        botonFavoritosPelis.innerText = "+ Agregar a Favoritos";
+    } else {
+        /* Si NO lo incluye, que lo agregue al array y al boton le ponga "Quitar Favorito" */
+        favoritosPelis.push(detail_id);
+        botonFavoritosPelis.innerText = "- Quitar de Favorito";
+    }
+
+    /* Si lo incluye o no, quiero poder subir el array al localStorage ->
+    Pero tengo que pasarlo a JSON primeramente*/
+    let favToString = JSON.stringify(favoritosPelis);
+
+    /* Cuando este en JSON ahora si puedo subirlo al localStorage */
+    localStorage.setItem('favoritosPelis', favToString)
+
+});

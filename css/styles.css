@@ -305,6 +305,11 @@ h3{
     font-weight: lighter;
 }
 
+.imgwatch{
+    height: 70px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
 /* REGLAS DE RESPONSIVE */
 @media (max-width: 420px) {
 
