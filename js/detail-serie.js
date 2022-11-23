@@ -123,42 +123,42 @@ fetch(urlWatchProviders).then(function (res) {
 })
 
 
-let favoritosPelis = [];
-let botonFavoritosPelis = document.querySelector('#botonFavoritosPelis');
+let favoritosSeries = [];
+let botonFavoritosSeries = document.querySelector('#botonFavoritosSeries');
 
 
 /* recuperamos el storage */
-let recuperoStorage = localStorage.getItem('favoritosPelis');
+let recuperoStorage = localStorage.getItem('favoritosSeries');
 
 if (recuperoStorage != null) {
-    favoritosPelis = JSON.parse(recuperoStorage);
+    favoritosSeries = JSON.parse(recuperoStorage);
 };
 
 /* Validar si este id existe en el favoritos (localsStorage) */
-if (favoritosPelis.includes(detail_id)) {
-    botonFavoritosPelis.innerText = "- Quitar de Favoritos";
+if (favoritosSeries.includes(detail_id)) {
+    botonFavoritosSeries.innerText = "- Quitar de Favoritos";
 }
 
 /* Agregarle un evento al boton de agregar a favorito */
-botonFavoritosPelis.addEventListener("click", function (e) {
+botonFavoritosSeries.addEventListener("click", function (e) {
     e.preventDefault()
 
     /* Si lo incluye, que lo elimine del array y al boton le ponga "Agregar Favorito" */
-    if (favoritosPelis.includes(detail_id)) {
-        let indice = favoritosPelis.indexOf(detail_id);
-        favoritosPelis.splice(indice, 1);
-        botonFavoritosPelis.innerText = "+ Agregar a Favoritos";
+    if (favoritosSeries.includes(detail_id)) {
+        let indice = favoritosSeries.indexOf(detail_id);
+        favoritosSeries.splice(indice, 1);
+        botonFavoritosSeries.innerText = "+ Agregar a Favoritos";
     } else {
         /* Si NO lo incluye, que lo agregue al array y al boton le ponga "Quitar Favorito" */
-        favoritosPelis.push(detail_id);
-        botonFavoritosPelis.innerText = "- Quitar de Favorito";
+        favoritosSeries.push(detail_id);
+        botonFavoritosSeries.innerText = "- Quitar de Favorito";
     }
 
     /* Si lo incluye o no, quiero poder subir el array al localStorage ->
     Pero tengo que pasarlo a JSON primeramente*/
-    let favToString = JSON.stringify(favoritosPelis);
+    let favToString = JSON.stringify(favoritosSeries);
 
     /* Cuando este en JSON ahora si puedo subirlo al localStorage */
-    localStorage.setItem('favoritosPelis', favToString)
+    localStorage.setItem('favoritosSeries', favToString)
 
 });
