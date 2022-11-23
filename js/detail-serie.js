@@ -127,7 +127,7 @@ let favoritosSeries = [];
 let botonFavoritosSeries = document.querySelector('#botonFavoritosSeries');
 
 
-/* recuperamos el storage */
+
 let recuperoStorage = localStorage.getItem('favoritosSeries');
 
 if (recuperoStorage != null) {

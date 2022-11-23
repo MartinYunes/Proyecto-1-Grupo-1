@@ -13,14 +13,14 @@ fetch(urlGenerosPeliculas).then(function (response) {
     let generosPeliculas = document.querySelector('#genrespeliculas')
     let generosPelis = ''
 
-    for (let i = 0; i < 4; i++) {
-        generosPelis += `<li class="buenaLista"><a href="./detail-genres.html?id_genero_pelis=${listaDeGeneros[i].id}" class="DetalledelGenero">${listaDeGeneros[i].name}</a></li>`
-    
-    }
+        for (let i = 0; i < 4; i++) {
+            generosPelis += `<li class="buenaLista"><a href="./detail-genres.html?id_genero_pelis=${listaDeGeneros[i].id}" class="DetalledelGenero">${listaDeGeneros[i].name}</a></li>`
+        
+        }
 
-    generosPeliculas.innerHTML = generosPelis
+        generosPeliculas.innerHTML = generosPelis
 
-    console.log(listaDeGeneros[4])
+        console.log(listaDeGeneros[4])
 
 
 }).catch(function (error) {
