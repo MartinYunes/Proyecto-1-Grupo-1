@@ -143,9 +143,9 @@ h2{
     justify-content: center;
     text-align: center;
     height: 250px;
-    margin-right: 150px;
-    margin-top: 100px;
-    margin-left: 150px;
+    margin-right: 100px;
+    margin-top: 25px;
+    max-width: 200px;
 }
 
 .nombrepeli-serie{
@@ -155,7 +155,7 @@ h2{
     text-align: center;
     height: 250px;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 50px;
 }
 
 .linkadetalle{
@@ -277,7 +277,7 @@ h3{
     flex-direction: column;
     background-color: #1c1c1c91;
     width: 30%;
-    height: 2000px;
+    height: 400px;
     border-radius: 10px;
     justify-content: flex-start;
     align-items: center;
